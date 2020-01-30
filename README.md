@@ -1,38 +1,40 @@
-# ピザを焼く
+# One Line Dungeon
 
-> baking pizza
+This project is a one line dungeon generator.
 
-A project where we start with a "hello world" function and go on a journey to making it an API and getting it deployed into a decent environment.
+The app will generate a JSON object containing details of a procedurally generated "dungeon" with only one-dimension. This one-dimensional dungeon represents a scenario, a small snippet of what one would encounter in a traditional roguelike. The scenario should be visualizable by a short string of characters.
 
-The project name is from a storyline in the 銀の匙 (Silver Spoon) manga by 荒川 弘 (Hiromu Arakawa).
+This app was inspired by [Jim Shepard](https://twitter.com/madjackmcmad)'s [Storytelling, World Building, and You](https://www.youtube.com/watch?v=jd7K0EmkvPk) talk at [Roguelike Celebration](https://roguelike.club) 2018.
+
+### Specs
+
+1. The name of the world where this scenario exists will come from an environment variable.
+1. The scenario is one dimentional, not more than 16 characters long.
+1. Scenario generation is deterministic.
+1. There is some form of unique identifier for each generated scenario.
+1. The following are procedurally generated/placed:
+   1. exit/s
+   1. monster/s
+   1. item/s
+   1. trap/s
+   1. Amulet of Yendor
+
+### Purpose
+
+> ピザを焼く
+
+The intent is to start with the most basic "hello world" and then evolve it into a sample deployed service, applying/demonstrating workflow concepts along the way. The journey is recorded so people can follow the evolution, and hopefully learn from it.
+
+『ピザを焼く』 ("baking pizza") is a story arc from 銀の匙 (Silver Spoon), a manga by 荒川 弘 (Hiromu Arakawa). Hachiken, the protagonist, enrolled to an agricultural college knowing essentially nothing about agriculture. In the "Baking Pizza" arc, Hachiken stumbles into an old, broken, stone oven and is thrust into leading an effort to create pizza wiht it.
 
 ## The Journey
 
-1. [[done]](https://github.com/tehdarthvid/pizaoyaku/commit/1ef972f179e43c8d0e55550e4aefb2cbed848837) ["hello world" in Golang](#hello-world-in-golang)
-1. [[todo]]() [The App](#the-app-one-line-dungeon)
+1. [[done]](https://github.com/tehdarthvid/pizaoyaku/releases/tag/v0.1.0) "hello world" in Golang. [[journal]](#hello-world-in-golang)
+1. [todo] Define the initial [app scope](#the-app-one-line-dungeon) and [specs](#specs).
 
 ## The Journal
 
 [newest entry first]
-
-### The App: One Line Dungeon
-
-The app is a one line dungeon generator.
-
-The app will generate a JSON object containing details of a procedurally generated rouguelike dungeon representing an arena encounter. The specs are:
-
-1. The name of the world where this arena exists will come from an environment variable.
-1. The arena is one dimentional, 16 characters long.
-1. The arena generation is deterministic.
-1. There is some form of identifier for each generated arena.
-1. The following are procedurally generated/placed:
-   1. exit
-   1. Amulet of Yendor
-   1. monster/s
-   1. item/s
-   1. trap/s
-
-This app was inspired by [Jim Shepard](https://twitter.com/madjackmcmad)'s [Storytelling, World Building, and You](https://www.youtube.com/watch?v=jd7K0EmkvPk) talk at [Roguelike Celebration](https://roguelike.club) 2018.
 
 ### "hello world" in Golang
 
