@@ -3,7 +3,6 @@ package main
 import (
 	"crypto/sha512"
 	"fmt"
-	"os"
 	"time"
 )
 
@@ -25,7 +24,8 @@ func getTime() int64 {
 
 func getWhereAmI() string {
 	//fmt.Println(os.Getenv("OLD_DEPLOYMENT_ENV"))
-	return os.Getenv("OLD_DEPLOYMENT_ENV")
+	//return os.Getenv("OLD_DEPLOYMENT_ENV")
+	return "dev"
 }
 
 func getMonster(seed int64) string {
