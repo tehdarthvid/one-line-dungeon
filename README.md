@@ -27,10 +27,17 @@ The functionality was inspired by [Jim Shepard](https://twitter.com/madjackmcmad
    1. trap/s
    1. Amulet of Yendor
 
+## Building
+
+1. clone the repo: `git clone https://github.com/tehdarthvid/pizaoyaku.git`
+1. test: `go test ./src -v`
+1. build: `go build -v -o ./bin/old ./src`
+1. run : `./bin/old`
+
 ## The Journey
 
 1. [[done]](https://github.com/tehdarthvid/pizaoyaku/releases/tag/v0.1.0) "hello world" in Golang. [[journal]](#hello-world-in-golang)
-1. [[done]](https://github.com/tehdarthvid/pizaoyaku/commit/52cfd10d9781eecd72a197057bb15a4b34b4a62a) Define the initial [app scope](#the-app-one-line-dungeon) and [specs](#specs).
+1. [[done]](https://github.com/tehdarthvid/pizaoyaku/commit/52cfd10d9781eecd72a197057bb15a4b34b4a62a) Define the initial [app scope](#one-line-dungeon) and [specs](#specs).
 1. [[done]](https://github.com/tehdarthvid/pizaoyaku/commit/2e7bacfe4962d727dc8d7bfae8ca8699c65e2c51) Play around on implementing the specs in Go to learn the laguage basics.
    1. functions
    1. splices (lists)
@@ -47,10 +54,14 @@ The functionality was inspired by [Jim Shepard](https://twitter.com/madjackmcmad
 
 Why Golang?
 
-1.  Using JS may lessen the need for a build step. I want to make sure builds and binary deployments can be handled.
-1.  I want to learn Golang. :P
+1. Using JS may lessen the need for a build step. I want to make sure builds and binary deployments can be handled.
+1. I want to learn Golang. :P
 
 Speedbumps in this chapter:
 
-1.  issues with 'go install' due to GOBIN env
-1.  issues with 'go build' default output and '-o'
+1. issues with 'go install' due to GOBIN env
+1. issues with 'go build'
+   1. avoid params after the '-o' param
+   1. relative folders need to start with "." (`./src`)
+   1. no need to `*` (no need for `./src/*`)
+   1. default output is folder name
