@@ -23,7 +23,7 @@ jobs:
           fi
 
       - name: Test
-        run: go test src/main.go src/main_test.go -v
+        run: go test ./src/encounter/ -v
 
       - name: Build
-        run: go build -v -o bin/main src/main.go
+        run: go build -v -o ./bin/old ./src
