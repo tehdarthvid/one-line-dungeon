@@ -18,16 +18,14 @@ func getTime() int64 {
 }
 
 func getWhereAmI() string {
-	//fmt.Println(os.Getenv("OLD_DEPLOYMENT_ENV"))
-	return os.Getenv("OLD_DEPLOYMENT_ENV")
-	//return "dev"
+	return os.Getenv("OLD_TARGET_ENV")
 }
 
-// GenerateEncounter main returner.
-func GenerateEncounter() Encounter {
+// Create and return an Encounter.
+func Create() Encounter {
 	var res Encounter
 
-	res.WorldName = "tempDev"
+	res.WorldName = getWhereAmI()
 	res.Floor = "<.\\" + ".@!.[...g..\u2640|"
 
 	return res
