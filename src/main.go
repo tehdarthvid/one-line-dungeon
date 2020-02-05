@@ -2,6 +2,7 @@ package main
 
 import (
 	"crypto/sha512"
+	"encoding/base64"
 	"fmt"
 
 	"./encounter"
@@ -13,7 +14,7 @@ func main() {
 
 	enc := encounter.Create()
 
-	//sha := base64.URLEncoding.EncodeToString(hasher.Sum(nil))
+	sha := base64.URLEncoding.EncodeToString(hasher.Sum(nil))
 	//fmt.Println("世界[" + getWhereAmI() + "] = " + string(generateFloor()))
-	fmt.Println("世界[" + enc.WorldName + "] = " + enc.Floor)
+	fmt.Println("世界[" + enc.WorldName + "] = " + enc.Floor + " " + sha)
 }
