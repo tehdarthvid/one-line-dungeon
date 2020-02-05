@@ -6,13 +6,7 @@ In terms of functionality, it's currently aiming to be a "one line dungeon" gene
 
 The app will generate a JSON object containing details of a procedurally generated "dungeon" with only one-dimension. This one-dimensional dungeon represents a scenario, a small snippet of what one would encounter in a traditional roguelike. The scenario should be visualizable by a short string of characters, similar to ASCII or char rendered roguelikes.
 
-### Reference
-
 The functionality was inspired by [Jim Shepard](https://twitter.com/madjackmcmad)'s [Storytelling, World Building, and You](https://www.youtube.com/watch?v=jd7K0EmkvPk) talk at [Roguelike Celebration](https://roguelike.club) 2018.
-
-> ピザを焼く
-
-『ピザを焼く』 ("baking pizza") is a story arc from 銀の匙 (Silver Spoon), a manga by 荒川 弘 (Hiromu Arakawa). Hachiken, the protagonist, enrolled to an agricultural college knowing essentially nothing about agriculture. In the "Baking Pizza" arc, Hachiken stumbles into an old, broken, stone oven and is thrust into leading an effort to create pizza wiht it.
 
 ## Specs
 
