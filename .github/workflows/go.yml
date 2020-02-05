@@ -23,6 +23,8 @@ jobs:
           fi
 
       - name: Test
+        env:
+          OLD_TARGET_ENV: ${{ secrets.OLD_TARGET_ENV }}
         run: go test ./src/encounter/ -v
 
       - name: Build
