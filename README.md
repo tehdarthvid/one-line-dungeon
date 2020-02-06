@@ -36,7 +36,7 @@ Nothing really usable yet. More of you can see it evolve slowly.
 
 ## The Journey
 
-1. [[done]](https://github.com/tehdarthvid/pizaoyaku/releases/tag/v0.1.0) "hello world" in Golang. [[journal]](#hello-world-in-golang)
+1. [[done]](https://github.com/tehdarthvid/pizaoyaku/releases/tag/v0.1.0)[[journal]](#hello-world-in-golang) "hello world" in Golang.
 1. [[done]](https://github.com/tehdarthvid/pizaoyaku/commit/52cfd10d9781eecd72a197057bb15a4b34b4a62a) Define the initial [app scope](#one-line-dungeon) and [specs](#specs).
 1. [[done]](https://github.com/tehdarthvid/pizaoyaku/commit/2e7bacfe4962d727dc8d7bfae8ca8699c65e2c51) Play around on implementing the specs in Go to learn the laguage basics.
    1. functions
@@ -44,7 +44,7 @@ Nothing really usable yet. More of you can see it evolve slowly.
    1. getting time
    1. getting environment variables
 1. [[done]](https://github.com/tehdarthvid/pizaoyaku/commit/15035a79c90060bd035cedef2ed80248905f28e3) Play around on Unit Testing features of Go.
-1. [[done]](https://github.com/tehdarthvid/one-line-dungeon/commit/24aa5827bd3d9edbbdc0073dfcdae275bf38b86b) Investigate GitHub CI options. [[journal]](#first-github-actions)
+1. [[done]](https://github.com/tehdarthvid/one-line-dungeon/commit/24aa5827bd3d9edbbdc0073dfcdae275bf38b86b)[[journal]](#first-github-actions) Investigate GitHub CI options.
 1. [todo] Fill dummy output from Encounter package and generate a JSON from its caller.
 
 ## The Journal
