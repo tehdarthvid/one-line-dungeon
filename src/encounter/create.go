@@ -31,3 +31,14 @@ func Create() Encounter {
 	return res
 
 }
+
+// CreateFromSeed generate deterministic Encounter from seed
+func CreateFromSeed(seed int64) Encounter {
+	var res Encounter
+
+	res.WorldName = getWhereAmI()
+	res.Floor = "<.\\" + ".@!.[..." + string(rune((seed%26)+97)) + "..\u2640|"
+
+	return res
+
+}

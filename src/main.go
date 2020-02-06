@@ -12,7 +12,7 @@ func main() {
 	hasher := sha512.New()
 	hasher.Write([]byte("string"))
 
-	enc := encounter.Create()
+	enc := encounter.CreateFromSeed(10)
 
 	sha := base64.URLEncoding.EncodeToString(hasher.Sum(nil))
 	//fmt.Println("世界[" + getWhereAmI() + "] = " + string(generateFloor()))
