@@ -29,8 +29,8 @@ Nothing really usable yet. More of you can see it evolve slowly.
 
 ### Building
 
-1. clone the repo: `git clone https://github.com/tehdarthvid/pizaoyaku.git`
-1. test: `go test ./src -v`
+1. clone the repo: `git clone https://github.com/tehdarthvid/one-line-dungeon`
+1. run all unit tests: `go test ./src/... -v`
 1. build: `go build -v -o ./bin/old ./src`
 1. run : `./bin/old`
 
@@ -44,7 +44,8 @@ Nothing really usable yet. More of you can see it evolve slowly.
    1. getting time
    1. getting environment variables
 1. [[done]](https://github.com/tehdarthvid/pizaoyaku/commit/15035a79c90060bd035cedef2ed80248905f28e3) Play around on Unit Testing features of Go.
-1. [todo] Investigate GitHub CI options.
+1. [[done]](https://github.com/tehdarthvid/one-line-dungeon/commit/24aa5827bd3d9edbbdc0073dfcdae275bf38b86b) Investigate GitHub CI options. [[journal]](#first-github-actions)
+1. [todo] Fill dummy output from Encounter package and generate a JSON from its caller.
 
 ## The Journal
 
@@ -59,9 +60,20 @@ Why Golang?
 
 Speedbumps in this chapter:
 
-1. issues with 'go install' due to GOBIN env
+1. issues with 'go install' due to GOBIN env undefined
 1. issues with 'go build'
    1. avoid params after the '-o' param
    1. relative folders need to start with "." (`./src`)
    1. no need to `*` (no need for `./src/*`)
    1. default output is folder name
+
+### First GitHub Actions
+
+GitHub Actions helpfully provided a [starter workflow for Go](https://github.com/actions/starter-workflows/blob/master/ci/go.yml). This starter workflow just runs a Go build assuming files on root. We customized this to the build params based on this project's directory structure. Also added running the unit tests.
+
+There are two unit tests to check for the ability to set and retrive environment variables:
+
+1. [custom environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables)
+   These are in your workflow YAML, so they're visible.
+1. [custom environment variables for credtentials/tokens/secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
+   They SHOUT NOT be in your source files. They are stored in the system either via the GitHub or APIs. Once set, they cannot be retrieved, only removed. They are "not passed to workflows that are triggered by a pull request from a fork." They are also masked if you try to display them in the action logs, which is good.
