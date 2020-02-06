@@ -24,7 +24,7 @@ jobs:
 
       - name: Test
         env:
-          OLD_SECRET: ${{ secrets.OLD_TARGET_ENV }}
+          OLD_SECRET: ${{ secrets.OLD_SECRET }}
           OLD_TARGET_ENV: GHA-Test-Step
         run: go test ./src/... -v
 
