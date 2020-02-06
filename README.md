@@ -21,7 +21,13 @@ The functionality was inspired by [Jim Shepard](https://twitter.com/madjackmcmad
    1. trap/s
    1. Amulet of Yendor
 
-## Building
+## Status: pre-alpha
+
+Nothing really usable yet. More of you can see it evolve slowly.
+
+![Go Unit and Build Tests](https://github.com/tehdarthvid/one-line-dungeon/workflows/Go%20Unit%20and%20Build%20Tests/badge.svg)
+
+### Building
 
 1. clone the repo: `git clone https://github.com/tehdarthvid/pizaoyaku.git`
 1. test: `go test ./src -v`
