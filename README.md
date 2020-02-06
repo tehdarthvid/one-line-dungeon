@@ -76,4 +76,4 @@ There are two unit tests to check for the ability to set and retrive environment
 1. [custom environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables)
    These are in your workflow YAML, so they're visible.
 1. [custom environment variables for credtentials/tokens/secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
-   They SHOUT NOT be in your source files. They are stored in the system either via the GitHub or APIs. Once set, they cannot be retrieved, only removed. They are "not passed to workflows that are triggered by a pull request from a fork." They are also masked if you try to display them in the action logs, which is good.
+   They SHOULD NOT be in your source files. They are stored in the system either via the GitHub or APIs. Once set, they cannot be retrieved, only removed. They are "not passed to workflows that are triggered by a pull request from a fork." They are also masked if you try to display them in the action logs, which is good.
