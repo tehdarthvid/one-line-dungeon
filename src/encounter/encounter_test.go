@@ -15,6 +15,8 @@ func TestCreate(t *testing.T) {
 	res := Create()
 	if (0 >= len(res.Floor)) && (16 < len(res.Floor)) {
 		t.Errorf("len(generateEncounter) = %d; want: 1..16", len(res.Floor))
+	} else {
+		t.Log(res.Floor)
 	}
 }
 
