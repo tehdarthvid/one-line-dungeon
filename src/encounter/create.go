@@ -1,6 +1,8 @@
 package encounter
 
 import (
+	"crypto/sha512"
+	"math/rand"
 	"os"
 	"time"
 )
@@ -13,6 +15,10 @@ type Encounter struct {
 	Checksum  []byte // not really necessary, but I want to put in some math calculaitons
 }
 
+func init() {
+	rand.Seed(time.Now().UnixNano())
+}
+
 func getTime() int64 {
 	return time.Now().UnixNano()
 }
@@ -23,10 +29,9 @@ func getWhereAmI() string {
 
 // Create and return an Encounter.
 func Create() Encounter {
-	var res Encounter
 
-	res.WorldName = getWhereAmI()
-	res.Floor = "<.\\" + ".@!.[...g..\u2640|"
+	//rand.Seed(time.Now().UnixNano())
+	res := CreateFromSeed(rand.Int63())
 
 	return res
 
@@ -36,8 +41,14 @@ func Create() Encounter {
 func CreateFromSeed(seed int64) Encounter {
 	var res Encounter
 
+	res.Seed = seed
 	res.WorldName = getWhereAmI()
 	res.Floor = "<.\\" + ".@!.[..." + string(rune((seed%26)+97)) + "..\u2640|"
+
+	//fmt.Print(fmt.Sprintf("%v", res))
+	hasher := sha512.New()
+	//hasher.Write([]byte(fmt.Sprintf("%v", res)))
+	res.Checksum = hasher.Sum(nil)
 
 	return res
 
