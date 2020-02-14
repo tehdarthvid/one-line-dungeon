@@ -25,9 +25,9 @@ The functionality was inspired by [Jim Shepard](https://twitter.com/madjackmcmad
 
 Nothing really usable yet. More of you can see it evolve slowly.
 
-![Go Unit and Build Tests](https://github.com/tehdarthvid/one-line-dungeon/workflows/Go%20Unit%20and%20Build%20Tests/badge.svg)
-
 ### Building
+
+![Go Unit and Build Tests](https://github.com/tehdarthvid/one-line-dungeon/workflows/Go%20Unit%20and%20Build%20Tests/badge.svg)
 
 1. clone the repo: `git clone https://github.com/tehdarthvid/one-line-dungeon`
 1. run all unit tests: `go test ./src/... -v`
