@@ -19,7 +19,7 @@ The functionality was inspired by [Jim Shepard](https://twitter.com/madjackmcmad
    1. monster/s
    1. item/s
    1. trap/s
-   1. Amulet of Yendor
+   1. "Amulet of Yendor"
 
 ## Status: pre-alpha
 
@@ -45,6 +45,7 @@ Nothing really usable yet. More of you can see it evolve slowly.
    1. getting environment variables
 1. [[done]](https://github.com/tehdarthvid/pizaoyaku/commit/15035a79c90060bd035cedef2ed80248905f28e3) Play around on Unit Testing features of Go.
 1. [[done]](https://github.com/tehdarthvid/one-line-dungeon/commit/24aa5827bd3d9edbbdc0073dfcdae275bf38b86b)[[journal]](#first-github-actions) Investigate GitHub CI options.
+1. [todo] Redesign output into meta-data.
 1. [todo] Fill dummy output from Encounter package and generate a JSON from its caller.
 
 ## The Journal
