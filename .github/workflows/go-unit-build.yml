@@ -32,7 +32,7 @@ jobs:
         env:
           OLD_SECRET: ${{ secrets.OLD_SECRET }}
           OLD_TARGET_ENV: GHA-Test-Step
-        run: go test ./src/... -v
+        run: go test ./... -v
 
       - name: Build
-        run: go build -v -o ./bin/old ./src
+        run: go build -v -o ./bin/old ./cmd/
