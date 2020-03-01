@@ -66,7 +66,7 @@ Speedbumps in this chapter:
    1. avoid params after the '-o' param
    1. relative folders need to start with "." (`./src`)
    1. no need to `*` (no need for `./src/*`)
-   1. default output is folder name
+   1. default output name is folder name
 
 ### First GitHub Actions
 
