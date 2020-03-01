@@ -4,7 +4,7 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	"./encounter"
+	"darthvid.io/old/apis/encounter"
 )
 
 func main() {
